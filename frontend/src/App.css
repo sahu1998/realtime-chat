@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital@1&display=swap');
+.app{
+  min-height: 100vh;
+  font-family: 'Exo', sans-serif; 
+  /* background: url("./assets/background2.webp"); */
+  background-size: cover;
+  background-position: center;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.message__area {
+  /* height: 100%; */
+  /* padding: 10px; */
+  display: flex;
+  flex-direction: column;
+  /* padding-top: 40px; */
+  overflow-y: auto;
+}
+
+.loader {
+  width: 25px;
+  height: 20px;
+  background: radial-gradient(circle closest-side,#9a9aa4 90%,#0000) 0%   50%,
+         radial-gradient(circle closest-side,#9a9aa4 90%,#0000) 50%  50%,
+         radial-gradient(circle closest-side,#9a9aa4 90%,#0000) 100% 50%;
+  background-size: calc(100%/3) 13.4px;
+  background-repeat: no-repeat;
+  animation: dots-7ar3yq 1s infinite linear;
+}
+
+@keyframes dots-7ar3yq {
+  20% {
+     background-position: 0%   0%, 50%  50%,100%  50%;
+  }
+
+  40% {
+     background-position: 0% 100%, 50%   0%,100%  50%;
+  }
+
+  60% {
+     background-position: 0%  50%, 50% 100%,100%   0%;
+  }
+
+  80% {
+     background-position: 0%  50%, 50%  50%,100% 100%;
+  }
+}
+
+
+.badge1 {
+  position:relative;
+}
+.badge1[data-badge]:after {
+  content:attr(data-badge);
+  position:absolute;
+  top:1px;
+  right:2px;
+  font-size:.6em;
+  background:rgb(233, 16, 16);
+  color:white;
+  width:16px;
+  height:16px;
+  text-align:center;
+  line-height:17px;
+  border-radius:50%;
+  /* box-shadow:0 0 1px #333; */
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0.281);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
